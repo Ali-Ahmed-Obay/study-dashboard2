@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --shadow-color: #4c83c3;
+    --tab-bg: #498edf;
+    --title-bg: #0077ff;
+}
+
+.img-icon{
+    width: 35px;
+}
+
+.main-tab {
+    width: calc(100vw - 240px);
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tab-sec-title{
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    background: var(--title-bg);
+    color: #ffffff;
+    padding: 8px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    text-shadow: 2px 3px 3px black;
+    z-index: -1;
+}
+
+.tab-sec{
+    position: relative;
+    padding: 10px;
+    margin: 15px;
+    background: var(--tab-bg);
+    border-radius: 10px;
+    box-shadow: 10px 15px 25px 6px var(--shadow-color);
+}
+
+.tab-sec-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Progress Bars */
+
+.progress-bar{
+    width: 90%;
+    border-radius: 10px;
+    background: #ffffff6b;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-bar .name{
+    color: var(--clr);
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 190px;
+    text-align: center;
+    margin: 5px;
+}
+.progress-bar .percent{
+    width: 100%;
+    background: #ffffff61;
+    border-radius: 10px;
+    border: 2px solid var(--clr);
+}
+
+.progress-bar .percent .progress{
+    background-color: var(--clr);
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+
+.progress-bar .value{
+    color: var(--clr);
+    margin: 0 5px;
+    width: 75px;
+}
+

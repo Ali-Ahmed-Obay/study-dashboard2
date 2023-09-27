@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #0077ff;
+    --sub-color: #ffc72e;
+    --text-color: #040a3a;
+    --main-space: 10px;
+    --main-transition: .4s;
+}
+body{
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav.navbar{
+    padding-top: var(--main-space);
+    background: var(--main-color);
+    width: fit-content;
+    height: 100vh;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+    padding:var(--main-space);
+    margin: var(--main-space);
+    font-size: 20px;
+    cursor: pointer;
+    background: var(--main-color);
+    transition: .3s;
+}
+
+
+
+.navbar ul li span{
+    margin: calc(var(--main-space) - 5px);
+    color: var(--text-color);
+}
+
+.navbar ul li.active {
+    transition: transform .6s;
+    transform: translateX(0px);
+    padding-left: calc(var(--main-space) + 4px);
+    margin-left: 0;
+    border-left: 6px solid #04288d;
+    background: #4c83c3;
+}
+
+.navbar ul li:hover{
+    transform: translateX(15px);
+}
+.navbar ul li.active:hover{
+    transform: translateX(0);
+}
+
+/* Home Tab */
+
+.home .today p{
+    color: var(--sub-color);
+    text-shadow: 3px 2px 14px var(--sub-color);
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+.home .today .subjects{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.home .today .subjects .subj{
+    display: flex;
+    align-items: center;
+    padding:var(--main-space);
+    margin: var(--main-space);
+    font-size: 20px;
+    cursor: pointer;
+    background: var(--main-color);
+    border-radius: 10px;
+    transition: .3s;
+}
+.home .today .subjects .subj:hover{
+    background-color: var(--sub-color);
+    box-shadow: 0px 0px 15px 4px #ff7d7d;
+    transform: translateY(-5px);
+}
+
+.home .progress .remaining,
+.home .progress .complete{
+    font-size: 20px;
+    padding: 10px;
+    color: #a70000;
+    text-shadow: 2px 2px 8px #ff9292;
+}
+
+.home .progress .remaining span,
+.home .progress .complete span{
+    color: var(--sub-color);
+}
+
